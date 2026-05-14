@@ -1,1 +1,5 @@
-ignore .env
+# environment variables
+.env
+.env.local
+.env.development
+.env.production
