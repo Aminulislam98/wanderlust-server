@@ -55,6 +55,11 @@ async function run() {
       res.json(result);
     });
 
+    app.get("/featured", async (req, res) => {
+      const result = await destinationsCollection.find().limit(4).toArray();
+      res.json(result);
+    });
+
     app.post("/destination", async (req, res) => {
       const destinationData = req.body;
       console.log("New destination data entered in here!", destinationData);
